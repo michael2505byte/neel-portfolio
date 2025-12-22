@@ -26,7 +26,8 @@ export default function ResumePage() {
         <div className="flex gap-4 items-center text-sky-600">
           <a href={site.github} target="_blank" rel="noreferrer" className="underline">GitHub</a>
           <a href={site.linkedin} target="_blank" rel="noreferrer" className="underline">LinkedIn</a>
-          {site.portfolio ? <a href={site.portfolio} target="_blank" rel="noreferrer" className="underline">Portfolio</a> : null}
         </div>
       </section>
     </Layout>
+  );
+}

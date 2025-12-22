@@ -9,7 +9,6 @@ export default function Header() {
           <h1 className="text-lg font-semibold">{site.name}</h1>
           <p className="text-sm text-slate-500">{site.title}</p>
         </div>
-
         <nav className="space-x-4 text-sm">
           <Link href="/" className="hover:text-sky-600">Home</Link>
           <Link href="/projects" className="hover:text-sky-600">Projects</Link>
@@ -20,3 +19,5 @@ export default function Header() {
         </nav>
       </div>
     </header>
+  );
+}

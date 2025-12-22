@@ -31,8 +31,7 @@ export default function InternshipsPage() {
                       src={it.image}
                       alt={`${it.company} certificate`}
                       fill
-                      style={{ objectFit: "cover" }}
-                      sizes="(max-width: 768px) 100vw, 33vw"
+
                     />
                   ) : (
                     <div className="w-full h-full bg-slate-100 flex items-center justify-center text-slate-400">
@@ -75,34 +74,9 @@ export default function InternshipsPage() {
             ))}
           </div>
 
-          {openIndex !== null && (
-            <div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
-              onClick={() => setOpenIndex(null)}
-            >
-              <div
-                className="max-w-4xl w-full bg-white rounded overflow-hidden"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <div className="relative w-full h-[70vh]">
-                  <Image
-                    src={internships[openIndex].image || ""}
-                    alt={`${internships[openIndex].company} certificate`}
-                    fill
-                    style={{ objectFit: "contain" }}
-                    sizes="(max-width: 1024px) 100vw, 80vw"
-                  />
-                </div>
-
-                <div className="p-4 flex justify-between items-center">
-                  <div className="font-medium">{internships[openIndex].company} — {internships[openIndex].role}</div>
-                  <div>
-                    <button onClick={() => setOpenIndex(null)} className="px-3 py-1 rounded border">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+          {openIndex !== null && <div>Modal</div>}
         </>
       )}
     </Layout>
+  );
+}

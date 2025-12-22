@@ -42,7 +42,8 @@ export default function ContactPage() {
         <textarea name="message" rows={6} placeholder="Message" required className="p-3 border rounded" />
         <div className="flex items-center gap-4">
           <button type="submit" className="bg-slate-900 text-white px-4 py-2 rounded">Send message</button>
-          <div className="text-sm text-slate-500">{status}</div>
         </div>
       </form>
     </Layout>
+  );
+}
