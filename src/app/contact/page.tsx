@@ -50,48 +50,56 @@ export default function ContactPage() {
 
   return (
     <Layout>
-      <div className="max-w-2xl">
-        <h1 className="text-4xl font-bold mb-3 text-slate-900">Get in Touch</h1>
-        <p className="text-lg text-slate-600 mb-8">
+      <div className="max-w-3xl">
+        <h1 className="text-5xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3">
+          Get in Touch
+        </h1>
+        <p className="text-xl text-slate-600 font-bold mb-12 max-w-2xl">
           I'm always interested in hearing about new projects and opportunities. Feel free to reach out!
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <section>
-            <h2 className="text-xl font-bold text-slate-900 mb-4">Direct Contact</h2>
-            <div className="space-y-4">
-              <div>
-                <p className="text-sm font-medium text-slate-600 mb-1">Email</p>
-                <a
-                  href={`mailto:${site.email}`}
-                  className="text-sky-600 hover:text-sky-700 font-medium break-all"
-                >
-                  {site.email}
-                </a>
-              </div>
-              <div>
-                <p className="text-sm font-medium text-slate-600 mb-1">Phone</p>
-                <a href={`tel:${site.phone}`} className="text-sky-600 hover:text-sky-700 font-medium">
-                  {site.phone}
-                </a>
-              </div>
-              <div>
-                <p className="text-sm font-medium text-slate-600 mb-1">Location</p>
-                <p className="text-slate-700">{site.location}</p>
+        <div className="grid md:grid-cols-2 gap-12">
+          <section className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-black text-slate-900 mb-8 pb-4 border-b-2 border-blue-200">
+                📧 Direct Contact
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-blue-50 border-2 border-blue-200 p-6 rounded-xl">
+                  <p className="text-sm font-black text-blue-600 mb-2 uppercase tracking-widest">Email</p>
+                  <a
+                    href={`mailto:${site.email}`}
+                    className="text-blue-600 hover:text-blue-700 font-black text-lg break-all hover:underline"
+                  >
+                    {site.email}
+                  </a>
+                </div>
+                <div className="bg-indigo-50 border-2 border-indigo-200 p-6 rounded-xl">
+                  <p className="text-sm font-black text-indigo-600 mb-2 uppercase tracking-widest">Phone</p>
+                  <a href={`tel:${site.phone}`} className="text-indigo-600 hover:text-indigo-700 font-black text-lg hover:underline">
+                    {site.phone}
+                  </a>
+                </div>
+                <div className="bg-slate-100 border-2 border-slate-300 p-6 rounded-xl">
+                  <p className="text-sm font-black text-slate-700 mb-2 uppercase tracking-widest">Location</p>
+                  <p className="text-slate-700 font-black text-lg">{site.location}</p>
+                </div>
               </div>
             </div>
 
-            <div className="mt-8">
-              <h3 className="text-lg font-bold text-slate-900 mb-4">Connect Online</h3>
+            <div>
+              <h3 className="text-2xl font-black text-slate-900 mb-6 pb-4 border-b-2 border-blue-200">
+                🔗 Connect Online
+              </h3>
               <div className="flex flex-col gap-3">
                 {site.github && (
                   <a
                     href={site.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-medium"
+                    className="px-6 py-4 border-2 border-blue-600 text-blue-600 font-black rounded-xl hover:bg-blue-50 transition-all text-lg"
                   >
-                    GitHub →
+                    → GitHub
                   </a>
                 )}
                 {site.linkedin && (
@@ -99,9 +107,9 @@ export default function ContactPage() {
                     href={site.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-medium"
+                    className="px-6 py-4 border-2 border-indigo-600 text-indigo-600 font-black rounded-xl hover:bg-indigo-50 transition-all text-lg"
                   >
-                    LinkedIn →
+                    → LinkedIn
                   </a>
                 )}
               </div>
@@ -109,10 +117,12 @@ export default function ContactPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-slate-900 mb-4">Send a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <h2 className="text-2xl font-black text-slate-900 mb-8 pb-4 border-b-2 border-blue-200">
+              ✉️ Send a Message
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-900 mb-2">
+                <label htmlFor="name" className="block text-sm font-black text-slate-900 mb-3 uppercase tracking-widest">
                   Your Name
                 </label>
                 <input
@@ -120,13 +130,13 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-medium text-lg"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-900 mb-2">
+                <label htmlFor="email" className="block text-sm font-black text-slate-900 mb-3 uppercase tracking-widest">
                   Your Email
                 </label>
                 <input
@@ -134,21 +144,21 @@ export default function ContactPage() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-medium text-lg"
                   placeholder="you@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-900 mb-2">
+                <label htmlFor="message" className="block text-sm font-black text-slate-900 mb-3 uppercase tracking-widest">
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={4}
+                  rows={5}
                   required
-                  className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none font-medium text-lg"
                   placeholder="Your message here..."
                 />
               </div>
@@ -156,19 +166,21 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-slate-900 text-white font-medium py-2 rounded-lg hover:bg-slate-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black rounded-xl hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 text-lg"
               >
                 {isLoading ? "Sending..." : "Send Message"}
               </button>
 
               {status && (
-                <p
-                  className={`text-sm font-medium ${
-                    status.includes("✓") ? "text-green-600" : "text-red-600"
+                <div
+                  className={`p-4 rounded-lg font-black text-center text-lg ${
+                    status.includes("✓")
+                      ? "bg-green-100 border-2 border-green-400 text-green-700"
+                      : "bg-red-100 border-2 border-red-400 text-red-700"
                   }`}
                 >
                   {status}
-                </p>
+                </div>
               )}
             </form>
           </section>

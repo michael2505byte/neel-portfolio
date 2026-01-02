@@ -3,15 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --accent: #0ea5e9;
+  --accent: #3b82f6;
+  --accent-dark: #1e40af;
   --muted: #64748b;
-  --bg: #f8fafc;
+  --bg: #f0f9ff;
   --text: #0f172a;
+  --border: #e0e7ff;
 }
 
 html,
 body {
-  background: var(--bg);
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,12 +29,14 @@ html {
 
 /* Links */
 a {
-  color: #0284c7;
-  transition: color 0.2s ease;
+  color: #3b82f6;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 a:hover {
-  color: #0369a1;
+  color: #1e40af;
+  text-decoration: underline;
 }
 
 /* Headings */
@@ -43,30 +47,38 @@ h4,
 h5,
 h6 {
   color: var(--text);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
 }
 
 /* Focus states */
-:focus {
-  outline: 3px solid rgba(6, 182, 212, 0.5);
+:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.5);
   outline-offset: 2px;
 }
 
-button:focus {
-  outline: none;
+button:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 2px;
 }
 
 /* Card styles */
 .card {
   background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.5rem;
-  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  border-color: #cbd5e1;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-color: #3b82f6;
+  box-shadow: 0 20px 25px rgba(59, 130, 246, 0.1);
+  transform: translateY(-4px);
 }
 
 /* Utility classes */
@@ -80,4 +92,20 @@ button:focus {
   margin-right: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
 }

@@ -3,19 +3,33 @@ import { site } from "@/data/siteData";
 
 export default function Header() {
   return (
-    <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-40">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header className="border-b-2 border-blue-200 bg-white/95 backdrop-blur-sm sticky top-0 z-40 shadow-sm">
+      <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
         <div>
-          <h1 className="text-lg font-semibold">{site.name}</h1>
-          <p className="text-sm text-slate-500">{site.title}</p>
+          <h1 className="text-xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            {site.name}
+          </h1>
+          <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mt-1">{site.title}</p>
         </div>
-        <nav className="space-x-4 text-sm">
-          <Link href="/" className="hover:text-sky-600">Home</Link>
-          <Link href="/projects" className="hover:text-sky-600">Projects</Link>
-          <Link href="/internships" className="hover:text-sky-600">Internships</Link>
-          <Link href="/certificates" className="hover:text-sky-600">Certificates</Link>
-          <Link href="/resume" className="hover:text-sky-600">Resume</Link>
-          <Link href="/contact" className="hover:text-sky-600">Contact</Link>
+        <nav className="flex items-center gap-8 text-sm font-bold">
+          <Link href="/" className="text-slate-700 hover:text-blue-600 transition-colors">
+            Home
+          </Link>
+          <Link href="/projects" className="text-slate-700 hover:text-blue-600 transition-colors">
+            Projects
+          </Link>
+          <Link href="/internships" className="text-slate-700 hover:text-blue-600 transition-colors">
+            Internships
+          </Link>
+          <Link href="/certificates" className="text-slate-700 hover:text-blue-600 transition-colors">
+            Certificates
+          </Link>
+          <Link href="/resume" className="text-slate-700 hover:text-blue-600 transition-colors">
+            Resume
+          </Link>
+          <Link href="/contact" className="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all">
+            Contact
+          </Link>
         </nav>
       </div>
     </header>
