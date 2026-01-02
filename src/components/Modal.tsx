@@ -51,13 +51,14 @@ export default function Modal({ isOpen, imageSrc, title, onClose }: ModalProps) 
           ✕
         </button>
 
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-[70vh] bg-gray-200 flex items-center justify-center">
           <Image
             src={imageSrc}
             alt={title}
-            fill
-            className="object-contain"
-            sizes="(max-width: 768px) 100vw, 700px"
+            width={800}
+            height={600}
+            className="max-w-full max-h-full object-contain"
+            priority
           />
         </div>
 
