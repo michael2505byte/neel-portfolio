@@ -33,14 +33,14 @@ export const site: Site = {
   title: "Computer Engineering Student · ML · Cybersecurity · Full-Stack",
   email: "neelshah644@gmail.com",
   resume: "/resume.pdf",
-  github: "https://github.com/neelshah2409",
-  linkedin: "https://www.linkedin.com/in/neelshah2409",
-  portfolio: "https://neel-portfolio.vercel.app",
+  github: "https://github.com/michael2505byte",
+  linkedin: "https://www.linkedin.com/in/neel-shah-729a99281/",
+  portfolio: "https://neel-portfolio-e8cee7zf4-neel-s-projects-28628c32.vercel.app/",
 
   education: {
     degree: "B.Tech in Computer Engineering",
     college: "K J Somaiya Institute of Technology",
-    year: "2022 – 2026"
+    year: "2023 – Present"
   },
 
   internships: [

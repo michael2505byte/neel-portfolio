@@ -27,7 +27,7 @@ export default function ContactPage() {
 
     try {
       // Send email via form service
-      const response = await fetch("https://formspree.io/f/xyzqwert", {
+      const response = await fetch("https://formspree.io/f/xnneoavz", {
         method: "POST",
         headers: { Accept: "application/json" },
         body: data,

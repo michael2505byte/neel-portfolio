@@ -29,15 +29,15 @@ export default function InternshipsPage() {
               {internship.image && (
                 <button
                   onClick={() => setModalOpen(i)}
-                  className="w-full relative h-56 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden cursor-pointer"
+                  className="w-full h-56 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden cursor-pointer relative"
                 >
                   <Image
                     src={internship.image}
                     alt={`${internship.company} certificate`}
-                    fill
+                    width={600}
+                    height={480}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     priority={i < 3}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                     <button className="bg-white text-blue-600 font-bold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors">

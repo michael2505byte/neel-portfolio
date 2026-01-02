@@ -20,7 +20,7 @@ export const projects: Project[] = [
       "Optimized inference time and memory usage for better UX on mid-range devices.",
       "Designed accessible UI with screen reader support and keyboard navigation."
     ],
-    repoLink: "https://github.com/neelshah2409/seeforme"
+    repoLink: "https://github.com/michael2505byte/SeeForMe"
   },
   {
     slug: "forest-fire-detection-system",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "Calibrated sensor thresholds with machine learning to reduce false positives by 40%.",
       "Implemented data logging and visualization for historical analysis and trend detection."
     ],
-    repoLink: "https://github.com/neelshah2409/iot-forest-fire-detection"
+    repoLink: "https://github.com/michael2505byte/IoT-Based-Forest-Fire-Detection-System"
   },
   {
     slug: "animal-welfare-web",

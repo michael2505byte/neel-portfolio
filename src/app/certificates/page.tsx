@@ -33,14 +33,14 @@ export default function CertificatesPage() {
             onClick={() => setModalOpen(i)}
             className="group text-left card bg-white border-2 border-blue-100 rounded-xl overflow-hidden cursor-pointer hover:shadow-2xl hover:-translate-y-2 duration-300"
           >
-            <div className="relative w-full h-64 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+            <div className="w-full h-64 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
               <Image
                 src={cert.path}
                 alt={cert.title}
-                fill
+                width={600}
+                height={400}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 priority={i < 3}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
