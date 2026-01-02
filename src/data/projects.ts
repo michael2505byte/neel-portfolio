@@ -37,17 +37,16 @@ export const projects: Project[] = [
     repoLink: "https://github.com/neelshah2409/iot-forest-fire-detection"
   },
   {
-    slug: "inventory-management-system",
-    title: "Inventory Management System",
+    slug: "animal-welfare-web",
+    title: "Animal Welfare Web",
     short:
-      "Full-stack platform for tracking inventory, managing stock levels, and generating reports with role-based access control.",
-    tech: ["React", "Node.js", "MongoDB", "Express", "JWT"],
+      "Web platform for tracking and supporting animal welfare initiatives with community engagement and resource management.",
+    tech: ["React", "Tailwind CSS", "Firebase", "Google Maps API"],
     details: [
-      "Designed and implemented RESTful APIs for inventory operations with proper authentication and authorization.",
-      "Built responsive dashboard with real-time stock updates and low-inventory alerts.",
-      "Integrated barcode scanning for quick product lookup and inventory adjustments.",
-      "Created automated reporting system to track stock movements and generate business insights."
-    ],
-    repoLink: "https://github.com/neelshah2409/inventory-management"
+      "Designed and built responsive web interface for animal shelter management and adoption tracking.",
+      "Integrated Google Maps API to display nearby shelters and rescue centers with real-time data.",
+      "Implemented volunteer scheduling system and donation management features.",
+      "Created community forum for sharing rescue stories and adoption success cases."
+    ]
   }
 ];

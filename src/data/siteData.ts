@@ -32,8 +32,6 @@ export const site: Site = {
   name: "Neel Shah",
   title: "Computer Engineering Student · ML · Cybersecurity · Full-Stack",
   email: "neelshah644@gmail.com",
-  phone: "+91 9892179954",
-  location: "Andheri East, Mumbai, India",
   resume: "/resume.pdf",
   github: "https://github.com/neelshah2409",
   linkedin: "https://www.linkedin.com/in/neelshah2409",
@@ -42,7 +40,6 @@ export const site: Site = {
   education: {
     degree: "B.Tech in Computer Engineering",
     college: "K J Somaiya Institute of Technology",
-    cgpa: "7.89 CGPA",
     year: "2022 – 2026"
   },
 

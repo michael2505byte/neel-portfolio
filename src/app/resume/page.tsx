@@ -40,8 +40,7 @@ export default function ResumePage() {
             <div className="border-l-4 border-blue-600 pl-8 bg-blue-50 p-6 rounded-r-xl">
               <h3 className="text-2xl font-black text-slate-900">{site.education.degree}</h3>
               <p className="text-lg font-bold text-blue-600 mt-2">{site.education.college}</p>
-              <p className="text-slate-600 font-bold mt-2">{site.education.year}</p>
-              <p className="text-blue-600 font-black mt-3 text-lg">{site.education.cgpa}</p>
+              <p className="text-blue-600 font-black mt-3 text-lg">{site.education.year}</p>
             </div>
           </section>
 
@@ -78,16 +77,6 @@ export default function ResumePage() {
                 <a href={`mailto:${site.email}`} className="text-blue-600 hover:text-blue-700 font-bold break-all">
                   {site.email}
                 </a>
-              </li>
-              <li>
-                <span className="font-black text-slate-900 block mb-1">📱 Phone</span>
-                <a href={`tel:${site.phone}`} className="text-blue-600 hover:text-blue-700 font-bold">
-                  {site.phone}
-                </a>
-              </li>
-              <li>
-                <span className="font-black text-slate-900 block mb-1">📍 Location</span>
-                <p className="text-slate-700 font-bold">{site.location}</p>
               </li>
             </ul>
           </section>

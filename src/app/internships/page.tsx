@@ -34,10 +34,10 @@ export default function InternshipsPage() {
                   <Image
                     src={internship.image}
                     alt={`${internship.company} certificate`}
-                    width={400}
-                    height={320}
+                    fill
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     priority={i < 3}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                     <button className="bg-white text-blue-600 font-bold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors">
@@ -71,22 +71,12 @@ export default function InternshipsPage() {
                 </ul>
 
                 <div className="flex gap-2 pt-4 border-t border-blue-100">
-                  {internship.website && (
-                    <a
-                      href={internship.website}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex-1 text-center text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-3 py-2 rounded-lg transition-all duration-300 hover:shadow-lg"
-                    >
-                      Company Site →
-                    </a>
-                  )}
                   {internship.image && (
                     <button
                       onClick={() => setModalOpen(i)}
-                      className="flex-1 text-center text-sm font-bold text-blue-600 border-2 border-blue-200 hover:border-blue-600 hover:bg-blue-50 px-3 py-2 rounded-lg transition-all duration-300"
+                      className="flex-1 text-center text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-3 py-2 rounded-lg transition-all duration-300 hover:shadow-lg"
                     >
-                      Preview
+                      View Certificate
                     </button>
                   )}
                 </div>

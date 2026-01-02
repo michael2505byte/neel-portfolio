@@ -37,10 +37,10 @@ export default function CertificatesPage() {
               <Image
                 src={cert.path}
                 alt={cert.title}
-                width={400}
-                height={300}
+                fill
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 priority={i < 3}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
