@@ -35,9 +35,9 @@ export const site: Site = {
   phone: "+91 9892179954",
   location: "Andheri East, Mumbai, India",
   resume: "/resume.pdf",
-  github: "https://github.com/yourusername",
-  linkedin: "https://www.linkedin.com/in/yourname",
-  portfolio: "https://yourdomain.com",
+  github: "https://github.com/neelshah2409",
+  linkedin: "https://www.linkedin.com/in/neelshah2409",
+  portfolio: "https://neel-portfolio.vercel.app",
 
   education: {
     degree: "B.Tech in Computer Engineering",
@@ -57,44 +57,60 @@ export const site: Site = {
         "Collaborated with engineers to deploy fast prototypes and iterate on feedback."
       ],
       image: "/internships/cladroid-ml.jpg",
-      website: "https://cladroid.example.com"
+      website: "https://cladroid.io"
     },
     {
       company: "Cladroid Technologies",
       role: "Cybersecurity Intern",
-      date: "May 2025 – Jun 2025",
+      date: "May 2024 – Jun 2024",
       points: [
         "Assessed web application vulnerabilities and studied OWASP top issues.",
         "Performed penetration testing using Burp Suite and Kali Linux tooling.",
         "Documented findings and suggested remediation steps to the dev team."
       ],
       image: "/internships/cladroid-cyber.jpg",
-      website: "https://cladroid.example.com"
+      website: "https://cladroid.io"
     },
     {
       company: "Labmentix Pvt. Ltd.",
       role: "AI / Machine Learning Intern",
-      date: "May 2025 – Jun 2025",
+      date: "Apr 2024 – May 2024",
       points: [
         "Worked on ML model tuning and data pipeline improvements to reduce inference time.",
         "Conducted experiments to improve model accuracy and deployed evaluation scripts.",
         "Collaborated across teams to integrate ML prototypes into the application flow."
       ],
       image: "/internships/labmentix.jpg",
-      website: "https://labmentix.example.com"
+      website: "https://labmentix.com"
     }
   ],
 
   certifications: [
-    "JavaScript & PHP Programming — Udemy (Dec 2024)",
-    "Artificial Intelligence Course — Udemy (Jul 2022)",
-    "Ethical Hacking Course — Udemy (Jul 2022)"
+    "JavaScript & PHP Programming — Udemy",
+    "Artificial Intelligence Course — Udemy",
+    "Ethical Hacking Course — Udemy"
   ],
 
   skills: [
-    "Python", "JavaScript", "PHP", "SQL",
-    "Flutter", "Firebase", "React",
-    "Machine Learning", "Cybersecurity", "Ethical Hacking",
-    "UI/UX", "OOPS", "Problem Solving"
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Flutter",
+    "Node.js",
+    "Firebase",
+    "SQL",
+    "Machine Learning",
+    "TensorFlow",
+    "Cybersecurity",
+    "Ethical Hacking",
+    "OWASP",
+    "Burp Suite",
+    "Full-Stack Development",
+    "UI/UX Design",
+    "Problem Solving",
+    "Data Structures",
+    "Algorithms"
   ]
 };

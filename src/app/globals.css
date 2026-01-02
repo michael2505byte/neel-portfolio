@@ -2,38 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --accent: #0ea5a4;
-  --muted: #6b7280;
+:root {
+  --accent: #0ea5e9;
+  --muted: #64748b;
   --bg: #f8fafc;
-  --text: #0f1724;
+  --text: #0f172a;
 }
 
-html, body {
+html,
+body {
   background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
-/* container helper */
-.container {
-  max-width: 68rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Links */
-a { color: #0369a1; text-decoration: underline; }
-a:hover { color: #064e3b; }
+a {
+  color: #0284c7;
+  transition: color 0.2s ease;
+}
 
-/* Card background */
-.card-bg { background-color: #ffffff; }
+a:hover {
+  color: #0369a1;
+}
 
-.text-muted { color: var(--muted); }
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text);
+  font-weight: 600;
+}
 
-h1,h2,h3,h4 { color: var(--text); }
+/* Focus states */
+:focus {
+  outline: 3px solid rgba(6, 182, 212, 0.5);
+  outline-offset: 2px;
+}
 
-:focus { outline: 3px solid rgba(14,165,164,0.12); outline-offset: 2px; }
+button:focus {
+  outline: none;
+}
+
+/* Card styles */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Utility classes */
+.text-muted {
+  color: var(--muted);
+}
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}

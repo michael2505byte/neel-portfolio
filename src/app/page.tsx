@@ -4,115 +4,203 @@ import { projects } from "@/data/projects";
 import { site } from "@/data/siteData";
 
 export default function Home() {
-  const filtered = projects.filter((p) => p.slug !== "animal-welfare-web");
-  const sampleProjects = filtered.slice(0, 2);
+  const featuredProjects = projects.slice(0, 2);
   const skills = site.skills ?? [];
 
   return (
     <Layout>
-      <section className="grid md:grid-cols-3 gap-8 items-start">
-        <div className="md:col-span-2">
-          <h2 className="text-3xl font-bold mb-3 text-slate-900">Hi — I’m {site.name}. I build web tools and accessible ML apps.</h2>
-          <p className="text-slate-700 mb-6">
-            {site.title} at {site.education.college}. I work on projects spanning full-stack, mobile, IoT and ML. Contact:{" "}
-            <a className="underline text-sky-600" href={`mailto:${site.email}`}>
-              {site.email}
-            </a>
-          </p>
+      {/* Hero Section */}
+      <section className="mb-16">
+        <div className="grid md:grid-cols-3 gap-8 items-start">
+          <div className="md:col-span-2">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 leading-tight">
+              Hi — I'm {site.name}
+            </h1>
+            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              I build web tools and accessible ML applications. Computer Engineering student at{" "}
+              <span className="font-semibold">{site.education.college}</span> passionate about full-stack development, machine learning, and cybersecurity.
+            </p>
+            <p className="text-slate-600 mb-8">
+              Let's connect:{" "}
+              <a className="font-semibold text-sky-600 hover:text-sky-700" href={`mailto:${site.email}`}>
+                {site.email}
+              </a>
+            </p>
 
-          <h3 className="text-xl font-semibold mb-3 text-slate-900">Highlights</h3>
-          <div className="grid gap-3 md:grid-cols-2">
-            <div className="p-4 border rounded-md bg-white">
-              <h4 className="font-semibold text-slate-900">Accessible apps</h4>
-              <p className="text-slate-600">Built the See For Me app focused on simple UX, OCR and multilingual TTS for visually impaired users.</p>
-            </div>
-
-            <div className="p-4 border rounded-md bg-white">
-              <h4 className="font-semibold text-slate-900">IoT & Edge</h4>
-              <p className="text-slate-600">Prototype IoT system for early forest-fire detection with ESP8266 and sensor fusion.</p>
-            </div>
-
-            <div className="p-4 border rounded-md bg-white">
-              <h4 className="font-semibold text-slate-900">Full-stack platforms</h4>
-              <p className="text-slate-600">Developed a full-stack Animal Welfare platform with pincode-based search and NGO workflows.</p>
-            </div>
-
-            <div className="p-4 border rounded-md bg-white">
-              <h4 className="font-semibold text-slate-900">Security & ML internships</h4>
-              <p className="text-slate-600">Internship experience in Cybersecurity and ML — strong blend of practical dev and research.</p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={site.resume}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-slate-900 text-white px-5 py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors"
+              >
+                ↓ Download Resume
+              </a>
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-2 border border-slate-300 text-slate-900 px-5 py-3 rounded-lg font-medium hover:border-slate-400 hover:bg-slate-50 transition-colors"
+              >
+                View Projects
+              </Link>
+              <Link
+                href="/internships"
+                className="inline-flex items-center gap-2 border border-slate-300 text-slate-900 px-5 py-3 rounded-lg font-medium hover:border-slate-400 hover:bg-slate-50 transition-colors"
+              >
+                Internships
+              </Link>
             </div>
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/projects" className="inline-block bg-slate-900 text-white px-4 py-2 rounded">
-              See all projects
-            </Link>
+          {/* Quick Info Card */}
+          <aside className="md:sticky md:top-24 p-5 border border-slate-200 rounded-lg bg-white shadow-sm">
+            <h3 className="font-semibold text-slate-900 mb-4">Quick Facts</h3>
+            <ul className="text-sm text-slate-600 space-y-3">
+              <li>
+                <span className="font-semibold text-slate-900 block">{site.education.degree}</span>
+                <span className="text-slate-500">{site.education.college}</span>
+              </li>
+              <li>
+                <span className="font-semibold text-slate-900 block">CGPA</span>
+                <span className="text-slate-500">{site.education.cgpa}</span>
+              </li>
+              <li>
+                <span className="font-semibold text-slate-900 block">Internships</span>
+                <span className="text-slate-500">3 (ML, Cybersecurity, AI)</span>
+              </li>
+              <li>
+                <span className="font-semibold text-slate-900 block">Location</span>
+                <span className="text-slate-500">{site.location}</span>
+              </li>
+              <li>
+                <span className="font-semibold text-slate-900 block mb-1">Top Skills</span>
+                <div className="flex flex-wrap gap-1">
+                  {skills.slice(0, 6).map((skill) => (
+                    <span
+                      key={skill}
+                      className="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </li>
+            </ul>
 
-            <a href={site.resume} className="inline-block border px-4 py-2 rounded" target="_blank" rel="noreferrer">
-              Download resume
-            </a>
-
-            <Link href="/internships" className="inline-block ml-2 px-4 py-2 rounded border text-sky-600">
-              View internships
-            </Link>
-
-            <Link href="/certificates" className="inline-block ml-2 px-4 py-2 rounded border text-sky-600">
-              View certificates
-            </Link>
-          </div>
+            <div className="mt-5 pt-4 border-t border-slate-200 flex gap-3 text-sm">
+              {site.github && (
+                <a
+                  href={site.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sky-600 hover:text-sky-700 font-medium"
+                >
+                  GitHub
+                </a>
+              )}
+              {site.linkedin && (
+                <a
+                  href={site.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sky-600 hover:text-sky-700 font-medium"
+                >
+                  LinkedIn
+                </a>
+              )}
+            </div>
+          </aside>
         </div>
-
-        <aside className="p-4 border rounded-md bg-white">
-          <h4 className="font-semibold text-slate-900">Quick facts</h4>
-          <ul className="text-slate-600 mt-2 space-y-1">
-            <li>
-              <strong>Education:</strong> {site.education.degree} — {site.education.college}
-            </li>
-            <li>
-              <strong>Internships:</strong> Cladroid Technologies; Labmentix Pvt. Ltd.
-            </li>
-            <li>
-              <strong>Skills:</strong> {skills.slice(0, 6).join(", ")}…
-            </li>
-            <li>
-              <strong>Location:</strong> {site.location}
-            </li>
-          </ul>
-
-          <div className="mt-4">
-            {site.github ? (
-              <a href={site.github} target="_blank" rel="noreferrer" className="text-sky-600 underline">
-                GitHub
-              </a>
-            ) : null}
-            <span className="mx-2 text-slate-400">·</span>
-            {site.linkedin ? (
-              <a href={site.linkedin} target="_blank" rel="noreferrer" className="text-sky-600 underline">
-                LinkedIn
-              </a>
-            ) : null}
-          </div>
-        </aside>
       </section>
 
-      <section className="mt-10">
-        <h3 className="text-xl font-semibold mb-4 text-slate-900">Selected work</h3>
-        <div className="grid md:grid-cols-2 gap-6">
-          {sampleProjects.map((p) => (
-            <div key={p.slug} className="p-4 border rounded-md bg-white">
-              <h4 className="font-semibold text-slate-900">{p.title}</h4>
-              <p className="text-slate-600">{p.short}</p>
+      {/* Highlights Section */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-6 text-slate-900">What I Do</h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="p-5 border border-slate-200 rounded-lg bg-white hover:border-slate-300 transition-colors">
+            <h3 className="font-semibold text-slate-900 mb-2">🎨 Full-Stack Development</h3>
+            <p className="text-slate-600">
+              Build modern web applications with React, Next.js, and TypeScript. Strong focus on performance, accessibility, and UX.
+            </p>
+          </div>
 
-              {p.repoLink ? (
-                <div className="mt-3">
-                  <a href={p.repoLink} target="_blank" rel="noreferrer" className="text-sm inline-block bg-slate-800 text-white px-3 py-1 rounded">
-                    View GitHub
-                  </a>
-                </div>
-              ) : null}
+          <div className="p-5 border border-slate-200 rounded-lg bg-white hover:border-slate-300 transition-colors">
+            <h3 className="font-semibold text-slate-900 mb-2">🤖 Machine Learning</h3>
+            <p className="text-slate-600">
+              End-to-end ML pipelines from data preprocessing to model deployment. Experience with Python, TensorFlow, and real-world applications.
+            </p>
+          </div>
+
+          <div className="p-5 border border-slate-200 rounded-lg bg-white hover:border-slate-300 transition-colors">
+            <h3 className="font-semibold text-slate-900 mb-2">🔒 Cybersecurity</h3>
+            <p className="text-slate-600">
+              Web security assessment, penetration testing, and vulnerability analysis. Strong understanding of OWASP and best practices.
+            </p>
+          </div>
+
+          <div className="p-5 border border-slate-200 rounded-lg bg-white hover:border-slate-300 transition-colors">
+            <h3 className="font-semibold text-slate-900 mb-2">📱 IoT & Edge Computing</h3>
+            <p className="text-slate-600">
+              Arduino, ESP8266, and sensor integration. Building distributed systems for real-world monitoring and automation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects */}
+      <section className="mb-16">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-slate-900">Featured Projects</h2>
+          <Link href="/projects" className="text-sky-600 hover:text-sky-700 font-medium text-sm">
+            View all →
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {featuredProjects.map((p) => (
+            <div key={p.slug} className="p-6 border border-slate-200 rounded-lg bg-white hover:border-slate-300 hover:shadow-md transition-all">
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">{p.title}</h3>
+              <p className="text-slate-600 mb-4">{p.short}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {p.tech.slice(0, 4).map((t) => (
+                  <span
+                    key={t}
+                    className="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded"
+                  >
+                    {t}
+                  </span>
+                ))}
+                {p.tech.length > 4 && (
+                  <span className="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">
+                    +{p.tech.length - 4}
+                  </span>
+                )}
+              </div>
+              {p.repoLink && (
+                <a
+                  href={p.repoLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-medium text-sm"
+                >
+                  GitHub →
+                </a>
+              )}
             </div>
           ))}
         </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="p-8 rounded-lg bg-gradient-to-r from-sky-50 to-slate-50 border border-slate-200 text-center">
+        <h2 className="text-2xl font-bold text-slate-900 mb-3">Let's build something great together</h2>
+        <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+          I'm always open to interesting projects, collaboration, and opportunities to work on impactful problems.
+        </p>
+        <a
+          href={`mailto:${site.email}`}
+          className="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors"
+        >
+          Send me an email
+        </a>
       </section>
     </Layout>
   );

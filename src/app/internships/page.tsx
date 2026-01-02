@@ -2,80 +2,89 @@
 import { useState } from "react";
 import Image from "next/image";
 import Layout from "@/components/Layout";
-import { site, Internship } from "@/data/siteData";
+import Modal from "@/components/Modal";
+import { site } from "@/data/siteData";
 
 export default function InternshipsPage() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const internships: Internship[] = site.internships || [];
+  const [modalOpen, setModalOpen] = useState<number | null>(null);
+  const internships = site.internships || [];
 
   return (
     <Layout>
-      <h2 className="text-2xl font-bold mb-4">Internships</h2>
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold mb-3 text-slate-900">Internships</h1>
+        <p className="text-lg text-slate-600">
+          Real-world experience in Machine Learning, Cybersecurity, and AI systems.
+        </p>
+      </div>
 
       {internships.length === 0 ? (
-        <p className="text-slate-600">No internships listed.</p>
+        <p className="text-slate-600">No internships listed yet.</p>
       ) : (
-        <>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {internships.map((it, i) => (
-              <article key={i} className="border rounded-md p-4 bg-white shadow-sm">
-                <div
-                  className="relative w-full h-40 mb-3 cursor-pointer overflow-hidden rounded"
-                  onClick={() => setOpenIndex(i)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => { if (e.key === "Enter") setOpenIndex(i); }}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {internships.map((internship, i) => (
+            <div key={i} className="border border-slate-200 rounded-lg overflow-hidden bg-white hover:shadow-lg transition-shadow">
+              {internship.image && (
+                <button
+                  onClick={() => setModalOpen(i)}
+                  className="w-full relative h-48 bg-slate-100 overflow-hidden hover:opacity-90 transition-opacity"
                 >
-                  {it.image ? (
-                    <Image
-                      src={it.image}
-                      alt={`${it.company} certificate`}
-                      fill
+                  <Image
+                    src={internship.image}
+                    alt={`${internship.company} certificate`}
+                    fill
+                    className="object-cover"
+                  />
+                </button>
+              )}
 
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-slate-100 flex items-center justify-center text-slate-400">
-                      No image
-                    </div>
+              <div className="p-6">
+                <h2 className="text-xl font-bold text-slate-900 mb-2">{internship.company}</h2>
+                <h3 className="text-sm font-semibold text-sky-600 mb-1">{internship.role}</h3>
+                <p className="text-sm text-slate-500 mb-4">{internship.date}</p>
+
+                <ul className="space-y-2 mb-6">
+                  {internship.points?.map((point, idx) => (
+                    <li key={idx} className="flex gap-3 text-sm text-slate-700">
+                      <span className="text-sky-600 flex-shrink-0">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex gap-3 pt-4 border-t border-slate-200">
+                  {internship.website && (
+                    <a
+                      href={internship.website}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 text-center text-sm font-medium text-sky-600 hover:text-sky-700"
+                    >
+                      Company Site →
+                    </a>
                   )}
-                </div>
-
-                <div>
-                  <div className="font-semibold">{it.company}</div>
-                  <div className="text-sm text-slate-600">{it.role} • <span className="text-slate-500">{it.date}</span></div>
-
-                  <div className="mt-3 text-sm text-slate-700 space-y-1">
-                    {it.points?.map((p, idx) => (
-                      <div key={idx}>• {p}</div>
-                    ))}
-                  </div>
-
-                  <div className="mt-4 flex items-center gap-3">
-                    {it.website ? (
-                      <a
-                        href={it.website}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-sky-600 underline text-sm"
-                      >
-                        Company site
-                      </a>
-                    ) : null}
-
+                  {internship.image && (
                     <button
-                      onClick={() => setOpenIndex(i)}
-                      className="text-sm px-3 py-1 rounded border"
+                      onClick={() => setModalOpen(i)}
+                      className="flex-1 text-center text-sm font-medium text-slate-600 hover:text-slate-900"
                     >
                       Preview
                     </button>
-                  </div>
+                  )}
                 </div>
-              </article>
-            ))}
-          </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
-          {openIndex !== null && <div>Modal</div>}
-        </>
+      {modalOpen !== null && internships[modalOpen]?.image && (
+        <Modal
+          isOpen={true}
+          imageSrc={internships[modalOpen].image}
+          title={`${internships[modalOpen].company} - ${internships[modalOpen].role}`}
+          onClose={() => setModalOpen(null)}
+        />
       )}
     </Layout>
   );
