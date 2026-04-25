@@ -40,9 +40,9 @@ export default function InternshipsPage() {
                     priority={i < 3}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                    <button className="bg-white text-blue-600 font-bold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors">
+                    <span className="bg-white text-blue-600 font-bold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors inline-block">
                       View Certificate
-                    </button>
+                    </span>
                   </div>
                 </button>
               )}

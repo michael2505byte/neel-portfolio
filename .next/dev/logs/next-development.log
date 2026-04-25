@@ -1,0 +1,105 @@
+[00:00:01.612] Server  LOG      ✓ Ready in 1106ms
+[00:00:09.557] Server  LOG      ○ Compiling / ...
+[00:00:10.167] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:16.852] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <button> button 
+
+  ...
+    <LoadingBoundary name="internships/" loading={Promise}>
+      <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/internships" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+              <SegmentViewNode type="page" pagePath="internship...">
+                <SegmentTrieNode>
+                <ClientPageRoot Component={function InternshipsPage} serverProvidedParams={{...}}>
+                  <InternshipsPage params={Promise} searchParams={Promise}>
+                    <Layout>
+                      <div className="min-h-scre...">
+                        <div className="max-w-5xl ...">
+                          <div>
+                          <div className="grid grid-...">
+                            <div className="group card...">
+>                             <button
+>                               onClick={function onClick}
+>                               className="w-full h-56 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden cur..."
+>                             >
+                                <img>
+                                <ImagePreload>
+                                <div className="absolute i...">
+>                                 <button
+>                                   className="bg-white text-blue-600 font-bold px-4 py-2 rounded-lg hover:bg-blue-50 ..."
+>                                 >
+                              ...
+                            ...
+              ...
+            ...
+
+[00:00:16.853] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. button <button>
+[00:00:16.853] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:24.774] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:32.219] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:32.450] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <button> button 
+
+  ...
+    <LoadingBoundary name="internships/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/internships" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+              <SegmentViewNode type="page" pagePath="internship...">
+                <SegmentTrieNode>
+                <ClientPageRoot Component={function InternshipsPage} serverProvidedParams={{...}}>
+                  <InternshipsPage params={Promise} searchParams={Promise}>
+                    <Layout>
+                      <div className="min-h-scre...">
+                        <div className="max-w-5xl ...">
+                          <div>
+                          <div className="grid grid-...">
+                            <div className="group card...">
+>                             <button
+>                               onClick={function onClick}
+>                               className="w-full h-56 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden cur..."
+>                             >
+                                <img>
+                                <ImagePreload>
+                                <div className="absolute i...">
+>                                 <button
+>                                   className="bg-white text-blue-600 font-bold px-4 py-2 rounded-lg hover:bg-blue-50 ..."
+>                                 >
+                              ...
+                            ...
+              ...
+            ...
+
+[00:00:32.450] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. button <button>
+[00:00:32.451] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+[00:00:40.825] Server  LOG      ✓ Compiled in 99ms
+[00:00:45.432] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:47.642] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:49.875] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:52.439] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:28.636] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:30.341] Server  ERROR   C:\Users\NEEL\Documents\GitHub\neel-portfolio\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:30.342] Server  ERROR   C:\Users\NEEL\Documents\GitHub\neel-portfolio\.next\dev\server\chunks\ssr\[root-of-the-server]__93d0f0a8._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:30.346] Server  WARN    Error: Route "/projects/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:02:30.491] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:43.711] Server  LOG      ✓ Compiled in 40ms
+[00:02:57.145] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:00.572] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:03:08.090] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:37.286] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:40.112] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

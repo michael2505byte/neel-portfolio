@@ -6,6 +6,7 @@ import { site } from "@/data/siteData";
 export default function Home() {
   const featuredProjects = projects.slice(0, 2);
   const skills = site.skills ?? [];
+  const internshipCount = site.internships?.length ?? 0;
 
   return (
     <Layout>
@@ -89,8 +90,10 @@ export default function Home() {
 
               <div className="border-b border-blue-200 pb-8">
                 <p className="text-sm font-black text-blue-600 uppercase tracking-widest mb-3">Experience</p>
-                <p className="text-3xl font-black text-slate-900">3 Internships</p>
-                <p className="text-slate-600 font-bold mt-2">ML, Cybersecurity, AI</p>
+                <p className="text-3xl font-black text-slate-900">
+                  {internshipCount} Internship{internshipCount === 1 ? "" : "s"}
+                </p>
+                <p className="text-slate-600 font-bold mt-2">ML, Cybersecurity, AI, GenAI</p>
               </div>
 
               <div>
@@ -209,7 +212,9 @@ export default function Home() {
             <div className="card bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 rounded-2xl p-10 hover:shadow-2xl hover:-translate-y-2 duration-300 cursor-pointer h-full">
               <div className="text-5xl mb-4">💼</div>
               <h3 className="text-2xl font-black text-slate-900 mb-2">Internships</h3>
-              <p className="text-slate-700 font-bold mb-4">3 internships in ML, Security & AI</p>
+              <p className="text-slate-700 font-bold mb-4">
+                {internshipCount} internships in ML, Security, AI and GenAI
+              </p>
               <p className="text-blue-600 font-black text-lg">View experience →</p>
             </div>
           </Link>

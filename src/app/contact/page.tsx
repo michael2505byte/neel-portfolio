@@ -74,6 +74,25 @@ export default function ContactPage() {
                     {site.email}
                   </a>
                 </div>
+
+                {site.phone && (
+                  <div className="bg-indigo-50 border-2 border-indigo-200 p-6 rounded-xl">
+                    <p className="text-sm font-black text-indigo-600 mb-2 uppercase tracking-widest">Phone</p>
+                    <a
+                      href={`tel:${site.phone}`}
+                      className="text-indigo-600 hover:text-indigo-700 font-black text-lg hover:underline"
+                    >
+                      {site.phone}
+                    </a>
+                  </div>
+                )}
+
+                {site.location && (
+                  <div className="bg-slate-50 border-2 border-slate-200 p-6 rounded-xl">
+                    <p className="text-sm font-black text-slate-600 mb-2 uppercase tracking-widest">Location</p>
+                    <p className="text-slate-800 font-black text-lg">{site.location}</p>
+                  </div>
+                )}
               </div>
             </div>
 

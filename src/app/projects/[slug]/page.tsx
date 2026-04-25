@@ -2,10 +2,11 @@ import Layout from "@/components/Layout";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
-export default function ProjectDetail({ params }: Props) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectDetail({ params }: Props) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     return (

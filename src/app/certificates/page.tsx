@@ -10,9 +10,17 @@ export default function CertificatesPage() {
   const certifications = site.certifications || [];
 
   const certs = [
-    { title: "JavaScript & PHP Programming — Udemy", path: "/certificates/js_php_udemy.jpg" },
-    { title: "Artificial Intelligence — Udemy", path: "/certificates/ai_udemy.jpg" },
-    { title: "Ethical Hacking — Udemy", path: "/certificates/ethical_hacking_udemy.jpg" },
+    {
+      title: "2nd Prize (Software Category) - TECHSPARKS 2026, Fr. C. Rodrigues Institute of Technology",
+      path: "/certificates/techsparks-2026-2nd-prize.jpg"
+    },
+    {
+      title: "3rd Prize (Software Category) - Tantragyan 2026, Lokmanya Tilak College of Engineering",
+      path: "/certificates/tantragyan-2026-3rd-prize.jpg"
+    },
+    { title: "JavaScript and PHP Programming Course - Udemy", path: "/certificates/js_php_udemy.jpg" },
+    { title: "Artificial Intelligence Course - Udemy", path: "/certificates/ai_udemy.jpg" },
+    { title: "Ethical Hacking Course - Udemy", path: "/certificates/ethical_hacking_udemy.jpg" },
   ];
 
   return (
@@ -22,7 +30,7 @@ export default function CertificatesPage() {
           Certifications
         </h1>
         <p className="text-xl text-slate-600 max-w-2xl">
-          Professional development and specialized training certifications from industry-leading platforms.
+          Professional certifications and national-level competition achievements.
         </p>
       </div>
 

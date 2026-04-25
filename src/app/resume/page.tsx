@@ -10,7 +10,7 @@ export default function ResumePage() {
           Resume
         </h1>
         <p className="text-xl text-slate-600 font-bold max-w-2xl">
-          My comprehensive professional experience, education, and technical expertise.
+          Updated snapshot of my internships, certifications, and technical expertise.
         </p>
       </div>
 
@@ -66,6 +66,22 @@ export default function ResumePage() {
               ))}
             </div>
           </section>
+
+          <section className="mb-12">
+            <h2 className="text-3xl font-black text-slate-900 mb-8 pb-4 border-b-2 border-blue-200">
+              🏆 Certifications & Achievements
+            </h2>
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-6">
+              <ul className="space-y-4">
+                {(site.certifications || []).map((cert, i) => (
+                  <li key={i} className="flex gap-3 text-slate-700 font-medium">
+                    <span className="text-indigo-600 flex-shrink-0 font-black text-lg">✓</span>
+                    <span>{cert}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
         </div>
 
         <aside className="space-y-8">
@@ -78,6 +94,20 @@ export default function ResumePage() {
                   {site.email}
                 </a>
               </li>
+              {site.phone && (
+                <li>
+                  <span className="font-black text-slate-900 block mb-1">📱 Phone</span>
+                  <a href={`tel:${site.phone}`} className="text-blue-600 hover:text-blue-700 font-bold">
+                    {site.phone}
+                  </a>
+                </li>
+              )}
+              {site.location && (
+                <li>
+                  <span className="font-black text-slate-900 block mb-1">📍 Location</span>
+                  <p className="text-slate-700 font-bold">{site.location}</p>
+                </li>
+              )}
             </ul>
           </section>
 

@@ -30,24 +30,38 @@ export type Site = {
 
 export const site: Site = {
   name: "Neel Shah",
-  title: "Computer Engineering Student · ML · Cybersecurity · Full-Stack",
+  title: "Computer Engineering Student · ML · Cybersecurity · GenAI",
   email: "neelshah644@gmail.com",
+  phone: "+91 9892179954",
+  location: "Andheri East, Mumbai, India",
   resume: "/resume.pdf",
   github: "https://github.com/michael2505byte",
   linkedin: "https://www.linkedin.com/in/neel-shah-729a99281/",
-  portfolio: "https://neel-portfolio-e8cee7zf4-neel-s-projects-28628c32.vercel.app/",
+  portfolio: "https://neel-portfolio-8jj9lzurx-neel-s-projects-28628c32.vercel.app/",
 
   education: {
     degree: "B.Tech in Computer Engineering",
     college: "K J Somaiya Institute of Technology",
-    year: "2023 – Present"
+    year: "August 2023 - Pursuing"
   },
 
   internships: [
     {
       company: "Cladroid Technologies",
-      role: "Machine Learning Intern",
-      date: "Dec 2024 – Jan 2025",
+      role: "Intern - GenAI and Agentic AI",
+      date: "Dec 2025 - Jan 2026",
+      points: [
+        "Built GenAI and agentic AI workflows for rapid proof-of-concept automation use cases.",
+        "Improved output quality through prompt iteration, testing, and evaluation loops.",
+        "Collaborated with the team to integrate AI-assisted features into internal prototypes."
+      ],
+      image: "/internships/cladroid-agentic.jpg",
+      website: "https://cladroid.io"
+    },
+    {
+      company: "Cladroid Technologies",
+      role: "Intern - Machine Learning",
+      date: "Dec 2024 - Jan 2025",
       points: [
         "Worked on ML model development and experimentation for prototype features.",
         "Performed data preprocessing, feature engineering and model evaluation.",
@@ -58,8 +72,8 @@ export const site: Site = {
     },
     {
       company: "Cladroid Technologies",
-      role: "Cybersecurity Intern",
-      date: "May 2024 – Jun 2024",
+      role: "Intern - Cybersecurity",
+      date: "May 2025 - Jun 2025",
       points: [
         "Assessed web application vulnerabilities and studied OWASP top issues.",
         "Performed penetration testing using Burp Suite and Kali Linux tooling.",
@@ -70,8 +84,8 @@ export const site: Site = {
     },
     {
       company: "Labmentix Pvt. Ltd.",
-      role: "AI / Machine Learning Intern",
-      date: "Apr 2024 – May 2024",
+      role: "Intern - Artificial Intelligence and Machine Learning",
+      date: "May 2025 - Jun 2025",
       points: [
         "Worked on ML model tuning and data pipeline improvements to reduce inference time.",
         "Conducted experiments to improve model accuracy and deployed evaluation scripts.",
@@ -83,12 +97,18 @@ export const site: Site = {
   ],
 
   certifications: [
-    "JavaScript & PHP Programming — Udemy",
-    "Artificial Intelligence Course — Udemy",
-    "Ethical Hacking Course — Udemy"
+    "2nd Prize (Software Category) - TECHSPARKS 2026, Fr. C. Rodrigues Institute of Technology",
+    "3rd Prize (Software Category) - Tantragyan 2026, Lokmanya Tilak College of Engineering",
+    "JavaScript and PHP Programming Course - Udemy (Dec 2024)",
+    "Artificial Intelligence Course - Udemy (Jul 2022)",
+    "Ethical Hacking Course - Udemy (Jul 2022)"
   ],
 
   skills: [
+    "Java",
+    "Communication",
+    "Time Management",
+    "Object-Oriented Programming",
     "Python",
     "JavaScript",
     "TypeScript",

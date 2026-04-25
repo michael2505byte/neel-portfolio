@@ -23,6 +23,33 @@ export const projects: Project[] = [
     repoLink: "https://github.com/michael2505byte/SeeForMe"
   },
   {
+    slug: "solarscope",
+    title: "SolarScope",
+    short:
+      "AI-powered web system that analyzes aerial and satellite imagery to identify rooftops and existing solar panels for renewable energy planning.",
+    tech: [
+      "Python",
+      "Flask",
+      "PyTorch",
+      "DeepLab V3+",
+      "Faster R-CNN",
+      "OpenCV",
+      "NumPy",
+      "GeoAI",
+      "GeoJSON",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    details: [
+      "Built a sequential deep-learning pipeline to detect buildings, rooftops, and pre-installed solar panels.",
+      "Processed aerial and satellite imagery and generated visual overlays for quick site assessment.",
+      "Exported geospatial outputs in GeoJSON format to support planning workflows and mapping tools.",
+      "Developed a web interface for analysis review and data-driven renewable energy decision making."
+    ],
+    repoLink: "https://github.com/michael2505byte/SolarScope"
+  },
+  {
     slug: "forest-fire-detection-system",
     title: "Forest Fire Detection System",
     short:
