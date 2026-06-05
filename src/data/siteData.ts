@@ -31,7 +31,7 @@ export type Site = {
 export const site: Site = {
   name: "Neel Shah",
   title: "Computer Engineering Student · ML · Cybersecurity · GenAI",
-  email: "neelshah644@gmail.com",
+  email: "neels2505@gmail.com",
   phone: "+91 9892179954",
   location: "Andheri East, Mumbai, India",
   resume: "/resume.pdf",
